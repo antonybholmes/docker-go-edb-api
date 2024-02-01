@@ -1,4 +1,4 @@
-FROM golang:alpine as build-stage
+FROM golang as build-stage
 
 WORKDIR /app
 
@@ -14,7 +14,7 @@ RUN go mod tidy
 RUN CGO_ENABLED=1 GOOS=linux go build -o /go-edb-api
 
 # move app into smaller alpine image
-FROM alpine as release-stage
+FROM debian:slim as release-stage
 
 WORKDIR /
 
