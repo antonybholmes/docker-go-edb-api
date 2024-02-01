@@ -1,3 +1,3 @@
 # build in dev image
-docker build --tag docker-go-edb-api:multistage .
+docker build --tag go-edb-api:multistage .
 
