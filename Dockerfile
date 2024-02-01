@@ -14,7 +14,7 @@ RUN go mod tidy
 RUN CGO_ENABLED=1 GOOS=linux go build -o /go-edb-api
 
 # move app into smaller alpine image
-FROM debian:slim as release-stage
+FROM debian as release-stage
 
 WORKDIR /
 
