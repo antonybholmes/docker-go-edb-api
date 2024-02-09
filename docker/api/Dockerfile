@@ -5,7 +5,7 @@ WORKDIR /app
 ADD go-edb-api/ go-edb-api/
 ADD go-dna/ go-dna/
 ADD go-loctogene/ go-loctogene/
-ADD go-gene-annotation/ go-gene-annotation/
+ADD go-gene/ go-gene/
 ADD go-utils/ go-utils/
 
 WORKDIR /app/go-edb-api
