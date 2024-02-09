@@ -5,6 +5,8 @@ WORKDIR /app
 ADD go-edb-api/ go-edb-api/
 ADD go-dna/ go-dna/
 ADD go-loctogene/ go-loctogene/
+ADD go-gene-annotation/ go-gene-annotation/
+ADD go-utils/ go-utils/
 
 WORKDIR /app/go-edb-api
 
@@ -22,4 +24,4 @@ COPY --from=build-stage /go-edb-api /go-edb-api
 
 EXPOSE 8080
 
-CMD ["/go-edb-api"]
+CMD ["./go-edb-api"]
