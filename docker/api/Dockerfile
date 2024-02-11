@@ -13,7 +13,7 @@ WORKDIR /app/go-edb-api
 RUN go mod tidy
 
 # build statically so runs without dependencies
-RUN CGO_ENABLED=1 GOOS=linux go build -o /go-edb-api
+RUN CGO_ENABLED=1 GOOS=linux BUILD=production go build -o /go-edb-api
 
 # move app into smaller alpine image
 FROM debian as release-stage
@@ -24,4 +24,5 @@ COPY --from=build-stage /go-edb-api /go-edb-api
 
 EXPOSE 8080
 
-CMD ["./go-edb-api"]
+# CMD ["./go-edb-api"]
+CMD BUILD=production ./go-edb-api
