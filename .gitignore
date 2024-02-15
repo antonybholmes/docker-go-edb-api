@@ -25,6 +25,10 @@
 go-edb-api
 
 data/
+logs/
 go-dna/
 go-edb-api/
 go-loctogene/
+go-math/
+go-auth/
+go-gene/
