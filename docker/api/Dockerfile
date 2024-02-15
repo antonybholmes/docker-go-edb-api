@@ -6,7 +6,8 @@ ADD go-edb-api/ go-edb-api/
 ADD go-dna/ go-dna/
 ADD go-loctogene/ go-loctogene/
 ADD go-gene/ go-gene/
-ADD go-utils/ go-utils/
+ADD go-auth/ go-auth/
+ADD go-math/ go-math/
 
 WORKDIR /app/go-edb-api
 
