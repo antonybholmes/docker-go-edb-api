@@ -24,11 +24,11 @@
 
 go-edb-api
 
-data/
-logs/
-go-dna/
-go-edb-api/
-go-math/
-go-auth/
-go-gene/
-go-email/
+data
+logs
+go-dna
+go-edb-api
+go-math
+go-auth
+go-gene
+go-email
