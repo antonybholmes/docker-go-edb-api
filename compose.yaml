@@ -12,7 +12,8 @@ services:
       context: .
       dockerfile: docker/api/Dockerfile
     # https://vsupalov.com/docker-arg-env-variable-guide/
-    env_file: .env
+    env_file: 
+      .env
     ports:
       - 8080:8080
     volumes:
