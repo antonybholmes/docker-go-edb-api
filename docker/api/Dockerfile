@@ -4,10 +4,10 @@ WORKDIR /app
 
 ADD go-edb-api/ go-edb-api/
 ADD go-dna/ go-dna/
-ADD go-gene/ go-genes/
+ADD go-genes/ go-genes/
 ADD go-auth/ go-auth/
 ADD go-math/ go-math/
-ADD go-email/ go-mailer/
+ADD go-mailer/ go-mailer/
 ADD go-env/ go-env/
 
 WORKDIR /app/go-edb-api
