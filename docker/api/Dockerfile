@@ -8,7 +8,7 @@ ADD go-genes/ go-genes/
 ADD go-auth/ go-auth/
 ADD go-math/ go-math/
 ADD go-mailer/ go-mailer/
-ADD go-env/ go-env/
+ADD go-sys/ go-sys/
 
 WORKDIR /app/go-edb-api
 
