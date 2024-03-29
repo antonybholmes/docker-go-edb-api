@@ -27,7 +27,6 @@ COPY --from=build-stage /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build-stage /go-edb-api /go-edb-api
 COPY go-edb-api/templates/ /templates/
 COPY .env /
-COPY ../.aws/ /.aws/
 
 EXPOSE 8080
 
