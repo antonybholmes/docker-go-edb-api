@@ -23,7 +23,7 @@ FROM debian as release-stage
 WORKDIR /
 
 COPY --from=build-stage /go-edb-api /go-edb-api
-COPY --from=build-stage /go-edb-api/templates/ /templates/
+COPY go-edb-api/templates/ /templates/
 
 EXPOSE 8080
 
