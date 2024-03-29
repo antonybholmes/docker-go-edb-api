@@ -23,6 +23,9 @@ RUN CGO_ENABLED=1 GOOS=linux BUILD=production go build -o /go-edb-api
 FROM debian as release-stage
 
 WORKDIR /
+
+# need to copy certs for some reason as go email doesn't work without them
+# https://stackoverflow.com/questions/52969195/docker-container-running-golang-http-client-getting-error-certificate-signed-by
 COPY --from=build-stage /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build-stage /go-edb-api /go-edb-api
 COPY go-edb-api/templates/ /templates/
