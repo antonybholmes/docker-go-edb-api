@@ -24,6 +24,7 @@ WORKDIR /
 
 COPY --from=build-stage /go-edb-api /go-edb-api
 COPY go-edb-api/templates/ /templates/
+COPY .env /
 
 EXPOSE 8080
 
