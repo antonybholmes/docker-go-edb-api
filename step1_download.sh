@@ -14,5 +14,5 @@ do
 	cd ${pwd}
 done
 
-mkdir logs
-mkdir data
+#mkdir logs
+#mkdir data
