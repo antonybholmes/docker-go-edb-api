@@ -1,6 +1,6 @@
 FROM golang as build-stage
-RUN apk update
-RUN apk add -U --no-cache ca-certificates && update-ca-certificates
+# RUN apk update
+# RUN apk add -U --no-cache ca-certificates && update-ca-certificates
 
 WORKDIR /app
 
