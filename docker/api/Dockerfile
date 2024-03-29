@@ -1,4 +1,6 @@
 FROM golang as build-stage
+RUN apk update
+RUN apk add -U --no-cache ca-certificates && update-ca-certificates
 
 WORKDIR /app
 
@@ -21,7 +23,7 @@ RUN CGO_ENABLED=1 GOOS=linux BUILD=production go build -o /go-edb-api
 FROM debian as release-stage
 
 WORKDIR /
-
+COPY --from=build-stage /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build-stage /go-edb-api /go-edb-api
 COPY go-edb-api/templates/ /templates/
 COPY .env /
