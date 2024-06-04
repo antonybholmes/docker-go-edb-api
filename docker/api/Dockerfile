@@ -11,6 +11,8 @@ ADD go-auth/ go-auth/
 ADD go-math/ go-math/
 ADD go-mailer/ go-mailer/
 ADD go-sys/ go-sys/
+ADD go-gene-conversion/ go-gene-conversion/
+ADD go-mutations/ go-mutations/
 
 WORKDIR /app/go-edb-api
 
