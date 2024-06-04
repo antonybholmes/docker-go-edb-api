@@ -13,6 +13,8 @@ ADD go-mailer/ go-mailer/
 ADD go-sys/ go-sys/
 ADD go-gene-conversion/ go-gene-conversion/
 ADD go-mutations/ go-mutations/
+ADD go-microarray/ go-microarray/
+
 
 WORKDIR /app/go-edb-api
 
