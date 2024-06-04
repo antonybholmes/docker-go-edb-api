@@ -32,3 +32,5 @@ go-math
 go-auth
 go-gene
 go-email
+go-gene-conversion
+go-mutations
