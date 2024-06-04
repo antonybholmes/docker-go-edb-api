@@ -20,6 +20,10 @@
 
 # Dependency directories (remove the comment below to include it)
 
+jwtRS256.key
+jwtRS256.key.pub
+
+
 # vendor/
 
 go-edb-api

@@ -28,8 +28,14 @@ WORKDIR /
 # https://stackoverflow.com/questions/52969195/docker-container-running-golang-http-client-getting-error-certificate-signed-by
 COPY --from=build-stage /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
 COPY --from=build-stage /go-edb-api /go-edb-api
+
+# aux files needed by app
 COPY go-edb-api/templates/ /templates/
 COPY .env /
+COPY go-edb-api/jwtRS256.key /
+COPY go-edb-api/jwtRS256.key.pub /
+
+
 
 EXPOSE 8080
 
