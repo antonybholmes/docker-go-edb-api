@@ -30,7 +30,8 @@ go-dna
 go-edb-api
 go-math
 go-auth
-go-gene
-go-email
+go-genes
+go-mailer
 go-gene-conversion
 go-mutations
+go-microarray
