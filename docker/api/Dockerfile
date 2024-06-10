@@ -14,6 +14,7 @@ ADD go-sys/ go-sys/
 ADD go-gene-conversion/ go-gene-conversion/
 ADD go-mutations/ go-mutations/
 ADD go-microarray/ go-microarray/
+ADD go-motiftogene/ go-motiftogene/
 
 
 WORKDIR /app/go-edb-api
@@ -31,16 +32,18 @@ WORKDIR /
 # need to copy certs for some reason as go email doesn't work without them
 # https://stackoverflow.com/questions/52969195/docker-container-running-golang-http-client-getting-error-certificate-signed-by
 COPY --from=build-stage /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/
+
 COPY --from=build-stage /go-edb-api /go-edb-api
 
 # aux files needed by app
 COPY go-edb-api/templates/ /templates/
 COPY .env /
+
+# copy keys for signing jwts etc
 COPY jwtRS256.key /
 COPY jwtRS256.key.pub /
 
-
-
+# default port
 EXPOSE 8080
 
 # CMD ["./go-edb-api"]
