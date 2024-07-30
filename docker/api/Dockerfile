@@ -22,7 +22,7 @@ WORKDIR /app/go-edb-api
 RUN go mod tidy
 
 # build statically so runs without dependencies
-RUN CGO_ENABLED=1 GOOS=linux BUILD=production go build -o /go-edb-api
+RUN CGO_ENABLED=1 GOOS=linux BUILD=production go build --tags "fts5" -o /go-edb-api
 
 # move app into smaller alpine image
 FROM debian as release-stage
