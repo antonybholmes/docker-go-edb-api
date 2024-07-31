@@ -8,10 +8,11 @@ ADD go-edb-api/ go-edb-api/
 ADD go-dna/ go-dna/
 ADD go-genes/ go-genes/
 ADD go-auth/ go-auth/
-ADD go-math/ go-math/
+ADD go-basemath/ go-basemath/
 ADD go-mailer/ go-mailer/
 ADD go-sys/ go-sys/
-ADD go-gene-conversion/ go-gene-conversion/
+ADD go-geneconv/ go-geneconv/
+ADD go-pathway/ go-pathway/
 ADD go-mutations/ go-mutations/
 ADD go-microarray/ go-microarray/
 ADD go-motiftogene/ go-motiftogene/
